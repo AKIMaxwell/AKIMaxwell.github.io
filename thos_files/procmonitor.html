@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0162)file:///D:/Program%20Files/Git/hexo/public/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/procmonitor.html -->
+<html class="dj_webkit dj_chrome dj_contentbox dj_webkit dj_chrome dj_contentbox"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+     
+	 <title></title>
+	 <!-- 在techcomp\ria\base\base.jsp基礎之上，修改如下內容：
+（1）增加工作流全局url：String workflowPath = request.getContextPath()+"/workflow";
+（2）修改了獲取localStr的方式：String localeStr ="zh_CN";
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 录制脚本 -->
+<link href="./claro.css" rel="stylesheet" type="text/css">
+<style>
+	@import "/fp/techcomp/ria/unieap/themes/base/css/unieap.css";
+	@import "/fp/workflow/themes/ria/default/css/unieap.css";
+	@import "/fp/techcomp/ria/base/themes/common.css";
+	@import "/fp/techcomp/ria/unieapx/themes/gainsboro/css/query.css";
+	@import "/fp/techcomp/ria/unieapx/themes/css/exception.css";
+	@import "/fp/techcomp/ria/unieapx/themes/css/MessageCenter.css";
+	@import "/fp/techcomp/ria/unieapx/themes/base/css/layout-navigatorcontainer.css";
+	@import "/fp/techcomp/ria/unieapx/themes/gainsboro/css/layout-navigatorcontainer.css";
+	@import "/fp/techcomp/ria/unieapx/themes/gainsboro/css/form-quicksearch.css";
+	@import "/fp/techcomp/ria/unieapx/themes/gainsboro/css/record-script.css";
+	body{
+		margin : 0px;
+		visibility : hidden;
+	}
+</style>
+
+<!-- 工作流 -->
+<link type="text/css" rel="stylesheet" href="./jquery.mCustomScrollbar.css">
+<link type="text/css" rel="stylesheet" href="./dialog.css">
+
+<script type="text/javascript" src="./dojo.js.下载" djconfig=" parseOnLoad: true,locale:&#39;zh&#39;"></script>
+<script type="text/javascript" src="./dojo-patch.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./dijit.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./loader.js.下载"></script>
+<script type="text/javascript" src="./boosters.js.下载"></script>
+<script type="text/javascript" src="./application_zh_CN.js.下载"></script>
+<script type="text/javascript" src="./application_zh_CN.js(1).下载"></script>
+<script type="text/javascript" src="./global.js.下载"></script>
+<script type="text/javascript" src="./cache.js.下载"></script>
+<script type="text/javascript" src="./rpc.js.下载"></script>
+<script type="text/javascript" src="./Form.js.下载"></script>
+<script type="text/javascript" src="./FieldSet.js.下载"></script>
+<script type="text/javascript" src="./TextBox.js.下载"></script>
+<script type="text/javascript" src="./InlineEditBox.js.下载"></script>
+<script type="text/javascript" src="./Textarea.js.下载"></script>
+<script type="text/javascript" src="./NumberTextBox.js.下载"></script>
+<script type="text/javascript" src="./TextBoxWithIcon.js.下载"></script>
+<script type="text/javascript" src="./ComboBox.js.下载"></script>
+<script type="text/javascript" src="./DateTextBox.js.下载"></script>
+<script type="text/javascript" src="./ComboBoxTree.js.下载"></script>
+<script type="text/javascript" src="./Button.js.下载"></script>
+<script type="text/javascript" src="./DropDownButton.js.下载"></script>
+<script type="text/javascript" src="./CheckBox.js.下载"></script>
+<script type="text/javascript" src="./RadioButton.js.下载"></script>
+<script type="text/javascript" src="./CheckBoxGroup.js.下载"></script>
+<script type="text/javascript" src="./RadioButtonGroup.js.下载"></script>
+<script type="text/javascript" src="./FileInput.js.下载"></script>
+<script type="text/javascript" src="./FormListBinding.js.下载"></script>
+<script type="text/javascript" src="./FormList.js.下载"></script>
+<script type="text/javascript" src="./Tree.js.下载"></script>
+<script type="text/javascript" src="./Container.js.下载"></script>
+<script type="text/javascript" src="./TitlePane.js.下载"></script>
+<script type="text/javascript" src="./TabContainer.js.下载"></script>
+<script type="text/javascript" src="./AdaptiveContainer.js.下载"></script>
+<script type="text/javascript" src="./BorderContainer.js.下载"></script>
+<script type="text/javascript" src="./BorderPane.js.下载"></script>
+<script type="text/javascript" src="./Grid.js.下载"></script>
+<script type="text/javascript" src="./Grid.js(1).下载"></script>
+<script type="text/javascript" src="./DialogUtil.js.下载"></script>
+<script type="text/javascript" src="./xDialogUtil.js.下载"></script>
+<script type="text/javascript" src="./xDialog.js.下载"></script>
+<script type="text/javascript" src="./MessageBox.js.下载"></script>
+<script type="text/javascript" src="./menu.js(1).下载"></script>
+<script type="text/javascript" src="./Tooltip.js.下载"></script>
+<script type="text/javascript" src="./ProgressBar.js.下载"></script>
+<script type="text/javascript" src="./rpc.js(1).下载"></script>
+<script type="text/javascript" src="./view.js.下载"></script>
+
+<script type="text/javascript" src="./HBoxContainer.js.下载"></script>
+<script type="text/javascript" src="./VBoxContainer.js.下载"></script>
+<script type="text/javascript" src="./StackContainer.js.下载"></script>
+<script type="text/javascript" src="./AccordionPane.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./AccordionContainer.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./MultilineTextBox.js.下载"></script>
+
+<script type="text/javascript" src="./MessageCenter.js.下载"></script>
+<script type="text/javascript" src="./TraceMessageBox.js.下载"></script>
+<script type="text/javascript" src="./Query.js.下载"></script>
+<script type="text/javascript" src="./Binding.js.下载"></script>
+<script type="text/javascript" src="./AdvancedQuery.js.下载"></script>
+<script type="text/javascript" src="./FormList.js.下载"></script>
+<script type="text/javascript" src="./FormListBinding.js.下载"></script>
+<script type="text/javascript" src="./QuickSearch.js.下载"></script>
+<script type="text/javascript" src="./Handler.js.下载"></script>
+<script type="text/javascript" src="./NavigatorContainer.js.下载"></script>
+<script type="text/javascript" src="./NavigatorController.js.下载"></script>
+<script type="text/javascript" src="./NavigatorPane.js.下载"></script>
+
+<script type="text/javascript" src="./NumberSpinner.js.下载"></script>
+<script type="text/javascript" src="./Slider.js.下载"></script>
+<script type="text/javascript" src="./IpAddress.js.下载"></script>
+
+<script type="text/javascript" src="./common.js(1).下载"></script> 
+
+<!-- 加載工作流擴展的RIA -->
+<script type="text/javascript" src="./i18n_zh_CN.js.下载" load="cache"></script> 
+<script type="text/javascript" src="./toolbar.js.下载"></script> 
+<script type="text/javascript" src="./SelectionManager.js.下载"></script> 
+<script type="text/javascript" src="./toolbar.js(1).下载" load="cache"></script> 
+<script type="text/javascript" src="./loader.js(1).下载" load="cache"></script> 
+<script type="text/javascript" src="./SelectionManager.js(1).下载" load="cache"></script> 
+<script type="text/javascript" src="./rpc.js(2).下载" load="cache"></script> 
+
+<script type="text/javascript" src="./jquery-1.8.3.js.下载" load="cache"></script>
+<script type="text/javascript" src="./jquery-ui-1.10.4.custom.js.下载" load="cache"></script>
+ <script type="text/javascript" src="./jquery.qtip-1.0.0-rc3.js.下载" load="cache"></script>
+  <script type="text/javascript" src="./tab.js.下载" load="cache"></script>
+  <script type="text/javascript" src="./template.js.下载" load="cache"></script>
+  <script type="text/javascript" src="./jquery.mousewheel.min.js.下载" load="cache"></script>
+  <script type="text/javascript" src="./jquery.mCustomScrollbar.concat.min.js.下载" load="cache"></script>
+   <script type="text/javascript" src="./bpopup.js.下载"></script>
+   <script type="text/javascript" src="./Tooltip.js(1).下载" load="cache"></script>
+   <script type="text/javascript" src="./dialog.js.下载"></script>
+<script type="text/javascript" src="./i18n_zh_CN.js(1).下载" load="cache"></script>
+<script type="text/javascript" src="./util.js.下载" load="cache"></script>
+
+<script type="text/javascript">
+
+	var dataCenter = new unieap.ds.DataCenter();/*用于单帧菜单，非单帧情况可以不定义*/
+	unieap.WEB_APP_NAME = "/fp";
+	unieap.WORKFLOW_PATH="/fp/workflow";
+	unieap.locale = "zh_CN";
+	unieap.userAccount = false?null:"2019310917";
+	unieap.userName=false?null:"刘雪庆";
+	unieap.userType="1";
+	unieap.cmpPath = "/fp/workflow/procinst/monitor/swf/entry/procmonitor.jsp";
+	dojo.addOnLoad(function(){
+		dojo.style(document.body,"visibility","visible");
+	});
+	
+	
+	dataCenter.setParameter("procinstId","2101171742530191");
+	
+	if(typeof(RIA_UNIEAPX_I18N)=='undefined'){
+		dojo.require("unieapx.nls.application_"+unieap.locale);
+	}
+	/*存储每个页面中view和viewc的名字，单帧下key为rootNodeId，非单帧下为viewContext*/
+  	if(typeof(unieapViewContextHolder) == "undefined"){
+		unieapViewContextHolder = {};
+	}
+</script>
+
+	 <style type="text/css">
+		 .monitor_iframe_border{
+		 	border: 2px solid #B5B9BD;
+		 }
+	 </style>
+	 <script language="JavaScript">
+	 	var patterFlag = "H5-Monitor";
+	 </script>
+     <link type="text/css" rel="stylesheet" href="./common.css">
+     <link type="text/css" rel="stylesheet" href="./dialog.css">
+     <script type="text/javascript" src="./jquery-ui-1.10.4.custom.js.下载"></script>
+     <script type="text/javascript" src="./jquery.easing.1.3.js.下载"></script>
+     <script type="text/javascript" src="./dialog.js.下载"></script>
+     <script type="text/javascript" src="./AC_OETags.js.下载"></script>
+     <script language="JavaScript" src="./OpenWin.js.下载"></script>
+     <script type="text/javascript" src="./procmonitor-view.js.下载"></script>
+<!--      Flex设计器，不要引用下面这个JS -->
+     <script type="text/javascript" src="./h5-procMonitor.js.下载"></script>
+     <script type="text/javascript" src="./XmlJsonUtil.js.下载"></script>
+     <script language="JavaScript">
+	      var procInstId = "2101171742530191";
+	       var procinstid = "2101171742530191";
+	        var contextPath="/fp";
+	     function rollback(xmlstr,ids){
+	         var idArray=ids.split(";");
+	    	 var typeAndId=idArray[0].split(",");
+	    	 var type=typeAndId[0];
+	    	 var id  =typeAndId[1];
+	    	 var tagName=getNameBaseType(type);
+	    	 var item=eval("("+XmlToJson(xmlstr,type,id)+")");
+	    	 procmonitor.actRollBack(item);
+	     }
+	     
+	     function actComplete(xmlstr,ids) {
+	    	 var idArray=ids.split(";");
+	    	 var typeAndId=idArray[0].split(",");
+	    	 var type=typeAndId[0];
+	    	 var id  =typeAndId[1];
+	    	 var tagName=getNameBaseType(type);
+	    	 var item=eval("("+XmlToJson(xmlstr,type,id)+")");
+	    	 var actInstId=item.instId;
+	    	 procmonitor.actComplete(actInstId);
+	    }
+	     
+	     function itemSelected(xmlstr,ids){
+	    	 var idArray=ids.split(";");
+	    	 //目前只取第一个选中节点，作为示例
+	    	 var typeAndId=idArray[0].split(",");
+	    	 var type=typeAndId[0]; 
+	    	 var id  =typeAndId[1];
+	    	 var tagName=getNameBaseType(type);
+	    	 var item=eval("("+XmlToJson(xmlstr,type,id)+")");
+	    	 procmonitor.loadDetail(type,item);
+	     }
+	     
+	     function doAbort(){
+	    	 procmonitor.doAbort(procInstId);
+	     }
+	     
+	     function doComplete(targetID,xmlstr,ids){
+	    	 procmonitor.doComplete(procInstId);
+	     }
+	     
+	     function doResume(){
+	    	 procmonitor.doResume(procInstId);
+	     }
+	     
+	     function doSuspend(){
+	    	 procmonitor.doSuspend(procInstId);
+	     }
+	     
+	     function doRestart(){
+	    	 procmonitor.doRestart(procInstId);
+	     }
+	     
+	     function refresh(){
+	    	 procmonitor.refresh(procInstId);
+	     }
+	
+	  </script>
+  </head>
+  <body class="unieap" style="height: 96%; overflow: hidden; visibility: visible;" data-new-gr-c-s-check-loaded="14.997.0" data-gr-ext-installed=""><a href="javascript:void(0);" id="unieap_for_focus" class="u-common-focus" tabindex="-1"></a>
+     <table width="100%" height="100%">
+       <tbody><tr height="90%"> 
+         <td width="100%" class="monitor_iframe_border">
+         	<script language="JavaScript" type="text/javascript"> 
+         	if(patterFlag=='H5-Monitor'){//H5监控
+         		procInstId = procInstId ? procInstId : "";
+         		var dc = new unieap.ds.DataCenter();
+         		var ctrlFlag=false;
+         		var ddc=unieap.Action.requestData({
+        			url:unieap.WORKFLOW_PATH+"/svgMonitor.action?procinstId="+procInstId,
+        			sync:true,
+        			load:function(dc,ds){
+        			    ctrlFlag=true;
+        			}
+           		 },dc);
+         		if(ctrlFlag){
+	       		     var procdefid = ddc.getParameter("procdefId");
+	       		     var version = ddc.getParameter("version");
+	       		     var line = ddc.getParameter("line");
+	       		     var lineArray = line&&line.split("#");
+	       		     var curStr = ddc.getParameter("curStr");
+	       		     var flag=ddc.getParameter("curstate");
+	       		     if(flag=="null"){
+	       		    	 flag="-1";
+       		     		}
+       		     var oplevel=ddc.getParameter("oplevel");
+       		     var v="hidden";
+         		setProcMakerIFrame(procInstId,procdefid,version,'processMonitor',contextPath,line,curStr,flag);
+         		}
+         	}else{//Flex监控
+         		 var dc = new unieap.ds.DataCenter();
+         	 	
+        	 	 procInstId = procInstId ? procInstId : "";
+        	 	 var ctrlFlag=false;
+        	 	 var ddc=unieap.Action.requestData({
+        			url:unieap.WORKFLOW_PATH+"/svgMonitor.action?procinstId="+procInstId,
+        			sync:true,
+        			load:function(dc,ds){
+        			    ctrlFlag=true;
+        			}
+           		 },dc);
+        	 	 
+        	    if(ctrlFlag){
+        	     var procdefid = ddc.getParameter("procdefId");
+        	     var version = ddc.getParameter("version");
+        	     var line = ddc.getParameter("line");
+        	     var lineArray = line&&line.split("#");
+        	     var curStr = ddc.getParameter("curStr");
+        	     var flag=ddc.getParameter("curstate");
+        	     if(flag=="null"){
+        	    	 flag="-1";
+        	     }
+        	     var oplevel=ddc.getParameter("oplevel");
+        	     var v="hidden";
+        	    
+        	   
+        	     // Major version of Flash required
+        	     var requiredMajorVersion = 9;
+        	     // Minor version of Flash required
+        	     var requiredMinorVersion = 0;
+        	     // Minor version of Flash required
+        	     var requiredRevision = 115;
+                 <!--
+        	      // Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+        	      var hasProductInstall = DetectFlashVer(6, 0, 65);
+        	      // Version check based upon the values defined in globals
+        	      var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+        	      if ( hasProductInstall && !hasRequestedVersion ) {
+        	      	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+        	      	// Location visited after installation is complete if installation is required
+        	      	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+        	      	var MMredirectURL = window.location;
+        	          document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+        	          var MMdoctitle = document.title;
+        	      	AC_FL_RunContent(
+        	      		"src", "playerProductInstall",
+        	              "FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&selectedID='+"2101171742530191"+'&isCreateNewProcess='+'false'+'&isNewVersion='+'false'+'&procinstID='+'2101171742530191'+'&operatable='+'false'+'&editable='+'false'+'&path='+"/fp"+"",
+        	      		"width", "943",
+        	      		"height", "566",
+        	      		"align", "middle",
+        	      		"id", "workflow",
+        	      		"quality", "high",
+        	      		"bgcolor", "#869ca7",
+        	      		"name", "workflow",
+        	      		"allowScriptAccess","sameDomain",
+        	      		"type", "application/x-shockwave-flash",
+        	      		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+        	      	);
+        	      	
+        	      } else if (hasRequestedVersion) {
+        	
+        	      	// if we've detected an acceptable version
+        	      	// embed the Flash Content SWF when all tests are passed
+        	      	AC_FL_RunContent(
+        	      			"src", "/fp/workflow/processCommon/swf/workflow",
+        	                  "FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&selectedID='+procdefid+'&selectedVersion='+version+'&pattern='+'Monitor'+'&isCreateNewProcess='+'false'+'&isNewVersion='+'false'+'&procinstID='+'2101171742530191'+'&operatable='+'false'+'&editable='+'false'+'&path='+"/fp"+'&confPath=/workflow/processCommon/swf'+'&oplevel='+oplevel+'&flag='+flag+"&line="+line+"&curID="+curStr+"&scaleX=1&scaleY=1"+"",
+        	      			"width", "100%",
+        	      			"height", "100%",
+        	      			"align", "middle",
+        	      			"id", "workflow", 
+        	      			"quality", "high",
+        	      			"bgcolor", "#869ca7",
+        	      			"name", "workflow",
+        	      			"allowScriptAccess","sameDomain",
+        	      			"type", "application/x-shockwave-flash",
+        	      			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+        	      	);
+        	        } else {
+        	          var url= "/fp/workflow/webdesign/designer/flash.jsp";
+        	          var width = 420;
+        	          var height = 240; 
+        	          open_scrollable_window(url,width,height); 
+        	        }
+        	    }
+         	}
+         		
+          	</script><iframe id="resourceViewIFrame" src="./processmonitor.html" style="width:100%;height:100%;border:0px;background: #fff;"></iframe>
+         </td>
+       </tr>
+	   <tr height="1%">
+	    <td valign="middle" colspan="2">
+		 <table id="tableFrame" style="display:none">
+		   <tbody><tr valign="top">
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./default_icon.svg"></td>
+			  <td align="left" valign="middle" width="40" class="input_text">初始态</td>
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./running_icon.svg"></td>
+		      <td align="left" valign="middle" width="40" class="input_text">运行态</td>
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./activate_icon.svg"></td>
+		      <td align="left" valign="middle" width="40" class="input_text">激活态</td>
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./hang_icon.svg"></td>
+		      <td align="left" valign="middle" width="40" class="input_text">挂起态</td>
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./complete_icon.svg"></td>
+		      <td align="left" valign="middle" width="40" class="input_text">完成态</td>
+			  <td align="left" valign="middle" width="10"><img style="width:16px; height:16px; margin: 2px;" src="./termination_icon.svg"></td>
+		      <td align="left" valign="middle" width="40" class="input_text">终止态</td>
+		      <td>&nbsp;</td>
+			 </tr>
+		 </tbody></table>
+		</td>
+	   </tr>
+     </tbody></table>
+  
+</body></html>
